@@ -1,6 +1,6 @@
 
 import cx from 'classnames'
-
+import Link from 'next/link'
 interface TableRowProps {
     title: string,
     category: string,
@@ -54,6 +54,11 @@ export default function TableRow(props: TableRowProps) {
                         {status}
                     </p>
                 </div>
+            </td>
+            <td>
+                <Link href="/member/transactions/detail">
+                    <a className="btn btn-status rounded-pill text-sm">Details</a>
+                </Link>
             </td>
         </tr>
     )
